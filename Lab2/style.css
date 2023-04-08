@@ -1,0 +1,63 @@
+.index {
+    background: url(images/Fon.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+
+    text-align: center;
+    margin: 145px;
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    border: 3px solid rgb(255, 255, 255);
+    padding: 8px;
+    border-radius: 20px;
+
+    background: url(images/formFon.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: rgb(0, 255, 183);
+}
+
+.btn2 {
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(0, 255, 183);
+    border: 1px solid rgb(0, 106, 255);
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.btn-registr {
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    border: 1px solid white;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.center-text {
+    text-align: center;
+    color: rgb(0, 255, 183);
+    
+}
+
+.image-2fon {
+    background: url(images/2fon.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    font-size:large;
+}

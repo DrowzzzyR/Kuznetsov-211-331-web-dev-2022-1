@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Регистрация</title>
+</head>
+
+<body class="image-2fon">
+    <main>
+        <h1 class="center-text">Регистрация</h1>
+
+        <form method="POST" action="http://httpbin.org/post" enctype="multipart/form-data">
+
+            <input type="hidden" name="user_id" value="1">
+
+            <div>
+                <p>
+                    <label for="fio">Имя:</label>
+                    <input type="text" name="fio" id="fio" placeholder="Введите ФИО" required>
+                </p>
+            </div>
+
+            <div>
+                <p>
+                    <label for="email">Адресс электронной почты:</label>
+                    <input type="email" name="email" id="email" placeholder="Введите email" required>
+                </p>
+            </div>
+
+            <fieldset class="btn2">
+                <legend>Откуда вы узнали о нас?</legend>
+
+                <div>
+                    <input type="radio" id="friends" name="source" value="friends" checked>
+                    <label for="friends">Рассказали друзья</label>
+                </div>
+
+                <div>
+                    <input type="radio" id="internet" name="source" value="internet">
+                    <label for="internet">Реклама в интернете</label>
+                </div>
+
+                <div>
+                    <input type="radio" id="Lichna_Iniciativa" name="source" value="lich">
+                    <label for="internet">Нашёл по личной инициативе</label>
+                </div>
+            </fieldset>
+
+
+
+            <div>
+                <label for="category">Категория обращения</label>
+                <select name="category_id" id="category" multiple>
+                    <option value="1" selected>Жалоба</option>
+                    <option value="2">Предложение</option>
+                    <option value="3">Другое...</option>
+                </select>
+            </div>
+
+            <div>
+                <p>
+                    <label>Введите текст сообщения:</label>
+                </p>
+
+            </div>
+
+            <textarea id="poletext" name="poletext" placeholder="Введите сообщение" cols="50" rows="5" required></textarea>
+
+            <div>
+                <p>
+                    <input type="checkbox" name="agreement" id="agreement" value="true" required>
+                    <label for="agreement">Согласен с обработкой персноальных данных</label>
+                </p>
+
+                <p>
+                    <input type="checkbox" name="rekomendaci" id="recomendaci" value="true">
+                    <label for="agreement">Хочу получать рекомендации по почте</label>
+                </p>
+            </div>
+
+            <div>
+                <label for="attachment">Вложение</label>
+                <input type="file" name="attachment" id="attachment">
+            </div>
+
+            <p class="center-text"><button type="submit">Зарегестрировать</button></p>
+
+        </form>
+
+    </main>
+</body>
+
+</html>

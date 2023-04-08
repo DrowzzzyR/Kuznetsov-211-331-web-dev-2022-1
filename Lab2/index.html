@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Авторизация</title>
+</head>
+
+<body class="index">
+    <main class="btn">
+
+        <h1 class="h">Авторизация</h1>
+
+        <form method="POST" action="http://httpbin.org/post" enctype="multipart/form-data">
+
+            <input type="hidden" name="user_id" value="1">
+
+            <div>
+                <label for="login">Login:</label>
+                <p><input type="text" name="login" id="login" placeholder="Введите login" required></p>
+            </div>
+
+            <div>
+                <label for="password">Password:</label>
+                <p><input type="password" name="password" id="password" placeholder="Введите  password" required></p>
+            </div>
+
+            <div>
+                <input type="checkbox" name="agreement" id="agreement" value="true" checked>
+                <label for="agreement">Запомнить</label>
+            </div>
+
+            <p><button type="submit">Войти</button></p>
+            <p><a href="form.html" class="btn-registr">Регистрация</a></p>
+
+        </form>
+
+    </main>
+</body>
+
+</html>
