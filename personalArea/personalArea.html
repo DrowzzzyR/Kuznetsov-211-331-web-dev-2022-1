@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Главная</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <nav class="navbar navbar-expand-lg my-4">
+            <div class="container">
+                <a class="navbar-brand d-flex justify-content-start" href="../index.html">
+                    <h2 class="d-flex justify-content-center"><span class="draw">Walker</span>Gid</h2>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse " id="navbarNav">
+                    <ul class="navbar-nav mb-2 mb-lg-0">
+                        <li class="nav-item mx-2">
+                            <a class="nav-link" href="../main-page/mainPage.html">Главная</a>
+                        </li>
+                        <li class="nav-item mx-2">
+                            <a class="nav-link" href="personalArea.html">Личный кабинет</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="list-order p-2 mx-auto" style="margin-bottom: 3rem;">
+            <div class="container p-0">
+                <h2 class="list-order-h2">Заявки</h2>
+                <p class="text-muted">Обращаем ваше внимание: на одной странице отображено не более пяти заявок.</p>
+                <p class="text-muted" style="color: rgb(154, 49, 70) !important;">ВНИМАНИЕ: Редактирование заявок временно недоступно. Приносим свои извинения.</p>
+
+                <div class="elements"
+                    data-url="http://exam-2023-1-api.std-900.ist.mospolytech.ru/api/orders?api_key=83d0d1af-0b9b-484e-bfc0-a2e63b7a456a">
+                    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+                        <div class="col">
+                            <div class="card" style="margin-bottom: 16px;">
+                                <h5 class="card-header"> <span class="item-col-name"></span> </h5>
+                                <div class="card-body">
+                                    <p class="card-text"> <span class="item-col-date"></span> </p>
+                                    <p class="card-text"> <span class="item-col-price"></span> </p>
+                                    <p class="item-col-btn">
+                                    <div class="actions ms-auto">
+                                        <i class="bi bi-eye me-2" data-bs-toggle="modal" data-bs-target="#show-order"
+                                            data-action="show"></i>
+                                        <i class="bi bi-pencil-fill me-2" data-bs-toggle="modal"
+                                            data-bs-target="#show-order" data-action="edit"></i>
+                                        <i class="bi bi-trash3" data-bs-toggle="modal" data-bs-target="#del-order"></i>
+                                    </div>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <nav aria-label="Page navigation" class="d-flex" style="justify-content: center;">
+                    <ul class="pagination pagination-orders mt-3">
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <template id="order-template">
+            <div class="col">
+                <div class="card" style="margin-bottom: 16px;">
+                    <h5 class="card-header"> <span class="item-col-name"></span> </h5>
+                    <div class="card-body">
+                        <p class="card-text"> <span class="item-col-date"></span> </p>
+                        <p class="card-text"> <span class="item-col-price"></span> </p>
+                        <p class="item-col-btn">
+                        <div class="actions ms-auto">
+                            <i class="bi bi-eye me-2" data-bs-toggle="modal" data-bs-target="#show-order"
+                                data-action="show"></i>
+                            <i class="bi bi-pencil-fill me-2" data-bs-toggle="modal" data-bs-target="#show-order"
+                                data-action="edit"></i>
+                            <i class="bi bi-trash3" data-bs-toggle="modal" data-bs-target="#del-order"></i>
+                        </div>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </template>
+
+    </main>
+
+
+    <!-- Модальное окно Просмотр/редактирование заявки -->
+    <div class="modal fade" id="show-order" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="showOrderLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Оформление заявки</h5>
+                    <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="info-modal">
+                            <div class="row mb-3">
+                                <div class="col-md-4">
+                                    <label for="guide-name" class="col-form-label">ФИО гида</label>
+                                </div>
+                                <div class="col-md-8">
+                                    <p style="margin-bottom: 0px;"><span class="guide-name"></span></p>
+                                </div>
+                            </div>
+
+                            <div class="row mb-3">
+                                <div class="col-md-4">
+                                    <label for="route-name" class="col-form-label">Название маршрута</label>
+                                </div>
+                                <div class="col-md-8">
+                                    <p style="margin-bottom: 0px;"><span class="route-name"></span></p>
+                                </div>
+                            </div>
+
+                            <div class="row mb-3">
+                                <div class="col-md-4">
+                                    <label for="excursion-date" class="col-form-label">Дата эксурсии</label>
+                                </div>
+                                <div class="col-md-8">
+                                    <input class="form-control" type="date" id="excursion-date" name="excursion-date"
+                                        min="2023-01-01" max="2023-12-31" data-url="https://isdayoff.ru" required>
+                                </div>
+                            </div>
+
+                            <div class="row mb-3">
+                                <div class="col-md-4">
+                                    <label for="excursion-time" class="col-form-label">Время начала</label>
+                                </div>
+                                <div class="col-md-8">
+                                    <input class="form-control" type="time" id="excursion-time" name="excursion-time"
+                                        min="09:00" max="22:30" step="1800" required>
+                                </div>
+                            </div>
+
+                            <div class="row mb-3">
+                                <div class="col-md-4">
+                                    <label for="excursion-duration" class="col-form-label">Длительность эксурсии</label>
+                                </div>
+                                <div class="col-md-8">
+                                    <select class="form-select" id="excursion-duration" name="excursion-duration"
+                                        required>
+                                        <option>1 час</option>
+                                        <option>2 часа</option>
+                                        <option>3 часа</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="row mb-3">
+                                <div class="col-md-4">
+                                    <label for="count-people" class="col-form-label">Количество человек</label>
+                                </div>
+                                <div class="col-md-8">
+                                    <input class="form-control" type="number" id="count-people" name="count-people"
+                                        min="1" max="20" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="options-container">
+                            <h5>Дополнительные опции:</h5>
+
+                            <div class="options d-flex">
+                                <div class="row mb-3">
+                                    <div class="text-option">
+                                        <label for="option-quick-arrival">Быстрый выезд гида (в течение часа)</label>
+                                        <p class="text-muted">+30% к стоимости</p>
+                                    </div>
+                                    <input type="checkbox" id="option-quick-arrival" name="option-quick-arrival">
+                                </div>
+
+                                <div class="row mb-3" style="justify-content: end;">
+                                    <div class="text-option">
+                                        <label for="option-presents">Тематические сувениры для посетителей</label>
+                                        <p class="text-muted">+500 рублей за человека
+                                        </p>
+                                    </div>
+                                    <input type="checkbox" id="option-presents" name="option-presents">
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="total-price-div">
+                            <div class="row mb-3">
+                                <div class="col-md-4">
+                                    <label for="total-price" class="col-form-label">Итоговая стоимость</label>
+                                </div>
+                                <div class="col-md-8">
+                                    <p style="font-weight: bold; margin-bottom: 0px;"><span class="total-price">
+                                            руб.</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="hidden" name="action">
+                        <input type="hidden" name="order-id">
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary btn-cancel" data-bs-dismiss="modal">Отменить</button>
+                    <button type="button" class="btn btn-primary btn-action" data-bs-dismiss="modal">Сохранить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальное окно Удаление заявки -->
+    <div class="modal fade" id="del-order" tabindex="-1" aria-labelledby="delOrderLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="delOrderLabel">Удаление задачи</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Вы уверены, что хотите удалить заявку?
+                    </p>
+                    <form>
+                        <input type="hidden" name="order-id">
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Нет</button>
+                    <button type="button" class="btn btn-danger delete-order-btn" data-bs-dismiss="modal"
+                        data-url="http://exam-2023-1-api.std-900.ist.mospolytech.ru/api/orders">Да</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="footer d-flex" style="background-color: rgba(8, 43, 197, 0.607); height: 50px; align-items: center;">
+        <div class="footer-div ps-2">
+            <p class="text" style="color: white;">&copy; 2023 Московский политехнический университет</p>
+        </div>
+    </footer>
+
+    <script src="personal-area.js" defer></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
