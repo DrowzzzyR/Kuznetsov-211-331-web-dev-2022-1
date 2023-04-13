@@ -1,0 +1,42 @@
+body {
+    height: 100vh;
+    background: linear-gradient(to right, rgba(60, 61, 112, 0.7), rgba(0, 0, 0, 0)), url(images/backPag.jpg); 
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+main {
+    height: 90vh;
+}
+
+.draw {
+    font-size: 30px;
+}
+
+
+h2 {
+    flex-direction: column;
+    text-align: center;
+}
+
+.navbar {
+    width: 100%;
+}
+
+.navbar a, h2 {
+    color: white;
+}
+
+h1 {
+    color: white;
+    text-align: left;
+    font-size: medium;
+    width: 30%;
+}
+
+.hero {
+    width: 100%;
+    flex-wrap: wrap;
+    height: 70%;
+}
