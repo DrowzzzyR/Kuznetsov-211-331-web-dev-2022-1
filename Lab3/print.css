@@ -1,0 +1,22 @@
+.footer {
+    justify-content: center;
+    
+}
+
+.header {
+    display: none;
+}
+
+.main-column {
+    justify-content: center;
+
+}
+
+.article {
+    text-align: center;
+}
+
+.article-info {
+    border: 1px solid black;
+    color: black;
+}

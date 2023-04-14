@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Интернет-новости</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="print.css" media="print">
+</head>
+<body>
+    <header class="header">
+        <div class="container d-flex">
+            <nav class="main-menu">
+                <div class="search">
+                    <input type="text" class="searchTerm" placeholder="Поиск статьи">
+                        <button type="submit" class="searchButton">
+                        <i class="fa fa-search"></i>&#10148;
+                        </button>
+                </div>
+
+            
+                <ul>
+                    <li><a href="">Город: Москва &#9660;</a></li>
+                    <li><a href="">Сотрудничество</a></li>
+                    <li><a href="">Контакты</a></li>
+                    <li><a href="">Помощь</a></li>
+                    <li><a href="">Предложения</a></li>
+                    <li><button class="button"><a href="form.html">Авторизация</a></button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+
+
+
+    <main class="container">
+        <aside class="sidebar">
+            <form>
+                <fieldset>
+                    <legend>Фильтры</legend>
+                    <div><input type="checkbox" value="manufacturer1" name="manufacturer" id="manufacturer1">
+                        <label for="manufacturer1">Рекомендации</label>
+                    </div>
+
+                    <div>
+                        <input type="checkbox" value="manufacturer2" name="manufacturer" id="manufacturer2">
+                        <label for="manufacturer2">Трансляции</label>
+                    </div>
+
+                    <div>
+                        <input type="checkbox" value="manufacturer3" name="manufacturer" id="manufacturer3">
+                        <label for="manufacturer3">Реакции</label>
+                    </div>
+
+                    <div>
+                        <input type="checkbox" value="manufacturer4" name="manufacturer" id="manufacturer4">
+                        <label for="manufacturer4">Обновления</label>
+                    </div>
+
+                    <div>
+                        <input type="checkbox" value="manufacturer5" name="manufacturer" id="manufacturer5">
+                        <label for="manufacturer5">Сначала интересные&#128293;</label>
+                    </div>
+
+                </fieldset>
+
+
+                <button type="submit">Применить</button>
+            </form>
+        </aside>
+        <div class="page-content">
+            <h1 class="product-category-header">Новости</h1>
+
+            <div class="product-list">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/hfd.jpg" alt="product">
+                    </div>
+
+                    <div class="product-details">
+                        <header>Реал Мадрид выиграли лигу чемпионов!</header>
+                        <p class="informaiton">«Реал Мадрид» обыграл в финале Лиги чемпионов «Ливерпуль» и установил исторический рекорд по доходам. «Ведомости. Спорт» рассказывает, сколько заработали финалисты в этом сезоне. </p>
+                    </div>
+                </div>
+
+
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/leo.jpg" alt="product">
+                    </div>
+
+                    <div class="product-details">
+                        <header>Чемпионат мира</header>
+
+                        <p class="informaiton">Сборная Аргентины победила команду Франции в серии пенальти в финале чемпионата мира в Катаре.
+
+                            Автором дубля в этой встрече стал нападающий аргентинцев Лионель Месси.</p>
+                    </div>
+                </div>
+
+
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/asdfe.jpg" alt="product">
+                    </div>
+
+                    <div class="product-details">
+                        <header>International</header>
+
+                        <p class="informaiton">Российская киберспортивная команда Team Spirit выиграла один из самых престижных турниров по Dota 2 — PGL Arlington Major. Соревнования с общим призовым фондом в $500 000 прошли в Арлингтоне (штат Техас, США). За победу Team Spirit получила $200 000 призовых.</p>
+                    </div>
+                </div>
+
+
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/sim.jpg" alt="product">
+                    </div>
+
+                    <div class="product-details">
+                        <header>Top 1 HLTV</header>
+
+                        <p class="informaiton">Симпл снова топ-1! Он превзошел свой лучший год, а это казалось невозможным</p>
+                    </div>
+                </div>
+
+
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/adsfq.jpg" alt="product">
+                    </div>
+
+                    <div class="product-details">
+                        <header>Outsideres Чемпионы Major</header>
+
+                        <p class="informaiton">Российская команда Virtus.pro победила на чемпионате мира IEM Rio Major 2022 по CS:GO. Российская киберспортивная команда Virtus.pro, выступающая под названием Outsiders, стала чемпионом мира по CS:GO, выиграв IEM Rio Major 2022. В финале коллектив одолел команду из Дании Heroic со счетом 2-0.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <button class="scroll-to-top-btn">
+            &#9650;
+        </button>
+
+        
+    </main>
+
+
+    <footer class="footer">
+        <div class="container">
+            &copy; 2022 ООО "Товары для дома"
+        </div>
+    </footer>
+
+</body>
+</html>
