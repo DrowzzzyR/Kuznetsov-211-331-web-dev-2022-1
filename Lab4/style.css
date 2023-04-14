@@ -1,0 +1,32 @@
+body {
+    background-image:linear-gradient(90deg, skyblue, transparent),
+    linear-gradient(-90deg, coral, transparent);
+    background-size: 100%;
+    margin: 0;
+}
+
+.block {
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+}
+
+.block_content {
+    padding-top: 10%;
+}
+
+.block_head_text {
+    position: relative;
+    top: 150px;
+    display: block;
+    text-align: center;
+    padding: 20px;
+    font-size: 20px;
+    background:radial-gradient(ellipse farthest-corner at right bottom, #fedb37 0%, #FDB931 8%, #9f7928 30%, #8a6e2f 40%, transparent 80%),
+    radial-gradient(ellipse farthest-corner at left top, #ffffff 0%, #ffffac 8%, #d1b464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+    opacity: 0.7;
+    text-decoration: none;
+    color: rgb(204, 255, 0);
+    
+    
+}
