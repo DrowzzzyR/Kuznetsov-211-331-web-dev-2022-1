@@ -1,0 +1,58 @@
+.background-color-header {
+  background-color: #0abc45;
+}
+
+.hero {
+  background-color: #eaecf0;
+}
+
+.info {
+  color: white;
+}
+
+.background-color div {
+  background-color: #0abc45;
+}
+
+.call-to-action {
+  background-color: #0abc45;
+  color: white;
+}
+
+.heading-line {
+  width: 200px;
+  height: 3px;
+  background-color: #ffff00;
+}
+
+i.bi {
+  color: #f3d783;
+  font-size: 2rem;
+}
+
+.technologies .row {
+  background-color: #0abc45;
+  color: #fcdbcd;
+  ;
+}
+
+.technologies .row>* {
+  height: 300px;
+}
+
+.technologies .row img {
+  height: 300px;
+  object-fit: cover;
+}
+
+.size {
+  width: 5%;
+}
+
+.footer {
+  background-color: #0abc45;
+}
+
+.btn-info {
+  background-color: #e3c677;
+}
